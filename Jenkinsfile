@@ -9,7 +9,7 @@ pipeline {
     stage('docker build') {
       steps {
         sh '''
-        sudo docker build -t nginx:latest .
+        docker build -t nginx:latest .
         '''
       }
     }
@@ -17,7 +17,7 @@ pipeline {
     stage('deploy k8s') {
       steps {
         sh '''
-        sudo kubectl apply -f np-pod.yml
+        kubectl apply -f np-pod.yml
         '''
       }
     }

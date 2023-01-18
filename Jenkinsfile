@@ -13,14 +13,5 @@ pipeline {
         '''
       }
     }
-    
-    stage('deploy k8s') {
-      steps {
-        sh '''
-        kubectl apply -f np-pod.yml
-        '''
-      }
-    }
-    
   }
 }

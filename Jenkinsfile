@@ -1,5 +1,5 @@
 pipeline {
-  enviroment {
+  environment {
     repository = "kyontoki/nginx"
     DOCKERHUB_CREDENTIALS = credentials('kyontoki')
     dockerImage = ''

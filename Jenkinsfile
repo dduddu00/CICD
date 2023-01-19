@@ -12,6 +12,13 @@ pipeline {
         docker build -t nginx:latest .
         '''
       }
+    stage('docker push') {
+      steps {
+        sh '''
+        docker tag nginx:latest kyontoki/nginx:1.0
+        docker push kyontoki/nginx:1.0
+        '''
+      } 
     }
   }
 }

@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
     - name: np-container
-      image: nginx:latest
+      image: kyontoki/nginx:1.0
 
 ---
 apiVersion: v1

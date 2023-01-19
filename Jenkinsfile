@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('git scm update') {
       steps {
-        git url: 'https://github.com/dduddu00/jen.git', branch: 'main'
+        git url: 'https://github.com/dduddu00/CICD.git', branch: 'main'
       }
     }
     stage('docker build') {
@@ -14,7 +14,7 @@ pipeline {
       }
     }
     
-    stage('deploy k8s') {
+    stage('deploy tag, deploy') {
       steps {
         sh '''
         docker tag nginx:latest kyontoki/nginx:1.0

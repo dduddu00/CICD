@@ -14,7 +14,7 @@ pipeline {
       }
     }
     
-    stage('deploy tag, deploy') {
+    stage('deploy deploy') {
       steps {
         sh '''
         docker tag nginx:latest kyontoki/nginx:1.0

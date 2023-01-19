@@ -12,6 +12,7 @@ pipeline {
         docker build -t nginx:latest .
         '''
       }
+    }
     stage('docker push') {
       steps {
         sh '''

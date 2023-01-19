@@ -2,9 +2,9 @@ apiVersion: v1
 
 kind: Pod
 metadata:
-  name: np-pod
+  name: kyo
   labels:
-    app: np-pod
+    app: kyo
 spec:
   containers:
     - name: np-container
@@ -14,10 +14,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: np-svc
+  name: kyo-svc
 spec:
   selector:
-    app: np-pod
+    app: kyo
   ports:
     - name: http
       protocol: TCP

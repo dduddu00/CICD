@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: np-container
-      image: kyontoki/ng:75
+      image: kyontoki/ng:76
 ---
 apiVersion: v1
 kind: Service

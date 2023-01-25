@@ -63,7 +63,7 @@ pipeline {
             sh "git commit -m '[UPDATE] POD ${BUILD_NUMBER} image versioning'" 
             sshagent (credentials: ['mykey']) {
             sh "git remote add origin https://dduddu00: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@github.com/dduddu00/CICD.git"
-            /* sh "git remote set-url origin https://github.com/dduddu00/CICD.git" */
+            /* sh "git remote set-url jenpipe https://github.com/dduddu00/CICD.git" */
             sh "git push -u origin main"
             }  
         }

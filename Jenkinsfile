@@ -62,7 +62,7 @@ pipeline {
             sh "git add kyo.yml"
             sh "git commit -m '[UPDATE] POD ${BUILD_NUMBER} image versioning'" 
             sshagent (credentials: ['key-jen']) {
-            sh "git remote set-url origin https://github.com/dduddu00/CICD.git"
+            sh "git remote set-url origin https://github.com/dduddu00/CICD.git" }
             sh "git push origin main"
             }  
         }

@@ -1,2 +1,391 @@
-Hello
-Poll SCM TEST
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Malware and GMD</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for ('static', filename='/assets/img/favicon.png')}}" rel="icon">
+  <link href="{{ url_for ('static', filename='/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for ('static', filename='/assets/vendor/aos/aos.css')}}"rel="stylesheet">
+  <link href="{{ url_for ('static', filename='/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for ('static', filename='/assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{ url_for ('static', filename='/assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for ('static', filename='/assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{ url_for ('static', filename='/assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+  <link href="{{ url_for ('static', filename='/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for ('static', filename='/assets/css/style.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Vesperr - v4.9.1
+  * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html">G M D</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="#about">Our Tools</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#faq">Uses</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">EPS 파일을 추출해 보세요</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">한글 파일 악성코드 분석을 시작하세요</h2>
+
+
+            <form method="post" action="/file_download">
+               <div data-aos="fade-up" data-aos-delay="800">
+                <button type="submit" class="btn-get-started">Start Download</button>
+              </div>
+            </form>
+
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
+          <img src="{{ url_for ('static', filename='/assets/img/hero-img.png')}}" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+      <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>차별화된 자동화, 간단하게 분석하세요!</h2>
+        </div>
+
+        <div class="row content">
+
+          <div class="col-lg-6 pt-4 pt-lg-0 section-plain" data-aos="fade-up" data-aos-delay="300">
+            <ul>
+              <li><i class="ri-check-double-line"></i> 악성코드를 추출하기 위해서는 다양한 도구가 필요했습니다.</li>
+              <li><i class="ri-check-double-line"></i> 기존에 악성코드를 분석하기 위해서는 파일 구조 확인, 압축 해제, 페이로드 복호화, 쉘 코드 추출 및 저장의 과정을 다양한 도구를 사용하는 불편함이 있었습니다.</li>
+              <li><i class="ri-check-double-line"></i> 이 불편함을 해소하고자 단 한 과정으로 일련의 과정들을 통합하여 한 번의 실행으로 해결할 수 있는 실행파일로 제작하여 배포하게 되었습니다.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Service</h2>
+          <p>한글 파일 기반 EPS 추출</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bx bx-list-check"></i></div>
+              <h4 class="title">파일 구조 확인</h4>
+              <p class="description">파일 구조를 확인하여 EPS 파일의 여부를 확인할 수 있습니다.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bx bxs-magic-wand"></i></div>
+              <h4 class="title">압축 해제</h4>
+              <p class="description">압축되어 있는 스트림 내용을 확인할 수 있도록 압축 해제를 진행합니다.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bx bx-key"></i></div>
+              <h4 class="title">복호화</h4>
+              <p class="description">PostScript로 암호화되어있는 페이로드를 복호화 합니다.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="bx bxs-file-plus"></i></div>
+              <h4 class="title">쉘 코드 추출 및 저장</h4>
+              <p class="description">악성코드 분석에 필요한 쉘 코드를 추출하여 저장합니다.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>사용 방법</h2>
+        </div>
+
+        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-5">
+            <i class="ri-question-line"></i>
+            <h4>파일 다운로드</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              Start Download를 클릭해 실행파일을 다운로드하세요!<br>
+              다운로드 한 실행파일과 분석할 HWP 파일을 같은 경로에 둡니다.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-5">
+            <i class="ri-question-line"></i>
+            <h4>추출할 HWP 파일명 입력 후 구조 확인</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              추출하고자 하는 HWP 파일을 입력해 주세요.<br>
+              여기서 주의할 점은 확장자인 <.hwp>도 모두 적어주어야 합니다!<br><br>
+
+              파일 구조 확인 후 EPS 파일이 존재한다면 "EPS Detected!" 가 출력됩니다.<br>
+              EPS 파일이 존재하지 않을 시 "EPS Nor Detected!"가 출력됩니다.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-5">
+            <i class="ri-question-line"></i>
+            <h4>복호화 Key 입력</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              화면에 출력된 복호화 Key를 입력해 주세요.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-5">
+            <i class="ri-question-line"></i>
+            <h4>압축 해제한 파일과 복호화 파일 저장 확인</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              저장된 EPS 추출 내용을 저장한 <~.hwp.eps> 파일과 쉘 코드를 추출하여 저장한 <~.hwp.txt> 파일이 생성되었는지 확인합니다.<br>
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+      </div>
+    </section><!-- End F.A.Q Section -->
+
+
+
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Team</h2>
+          <p>제작자</p>
+        </div>
+
+        <div class="row" style="justify-content:center;">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{{ url_for ('static', filename='/assets/img/jun.jpg')}}"class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.instagram.com/2jun_ash/"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>이재준</h4>
+                <span>Team Leader</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="member-img">
+                <img src="{{ url_for ('static', filename='/assets/img/oos.jpg')}}" class="img-fluid" alt="" style="margin: 87px 0 0 0">
+                <div class="social">
+                  <a href="https://www.instagram.com/00_c.sy/"><i class="bi bi-instagram"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>최수연</h4>
+                <span>Team members</span>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Contact Us</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-about">
+              <h3>문의하기</h3>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="info">
+              <div>
+                <i class="ri-map-pin-line"></i>
+                <p>청주대학교<br>충청북도 청주시 청원구 대성로 298 융합관 211호</p>
+              </div>
+
+              <div>
+                <i class="ri-mail-send-line"></i>
+                <p>18330004@cju.ac.kr <br>
+                2019011523@cju.ac.kr</p>
+              </div>
+
+              <div>
+                <i class="ri-phone-line"></i>
+                <p>043-229-8769</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>G M D</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
+            Designed by Lee & Choi</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#intro" class="scrollto">Home</a>
+            <a href="#about" class="scrollto">About</a>
+            <a href="#services">services</a>
+            <a href="#producer">Terms of Use</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for ('static', filename='/assets/vendor/purecounter/purecounter_vanilla.js')}}"></script>
+  <script src="{{ url_for ('static', filename='/assets/vendor/aos/aos.js')}}"></script>
+  <script src="{{ url_for ('static', filename='/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='/assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='/assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='/assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{ url_for ('static', filename='/assets/vendor/php-email-form/validate.js')}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for ('static', filename='/assets/js/main.js')}}"></script>
+
+</body>
+
+</html>
